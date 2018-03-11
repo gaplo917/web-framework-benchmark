@@ -39,11 +39,10 @@ https://github.com/codesenberg/bombardier
 
 ## Running Benchmark example
 ```
-cd expressjs
+# Run script template
+sh run.sh {bench_to_run} {endpoint} {save_path} {machine_name}
 
-# config your endpoint & machine type
-vi run.sh
-
-# Run benchmark and be patient!
-sh run.sh
+# Example
+sh run.sh bombardier_5x_less.sh http://10.148.0.2:8080/ ./single-vertx-with-kt-
+coroutine/ n1-standard-1
 ```
