@@ -4,3 +4,5 @@ php-laravel-lumen/blog/vendor/
 
 *.jar
 !gradle-wrapper.jar
+
+**/.idea
