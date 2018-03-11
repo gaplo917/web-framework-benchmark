@@ -11,6 +11,9 @@
 ## Kotlin Version
 1.2.10
 
+## Vert.x Version
+3.5.1
+
 ## Build executable
 ```
 ./gradlew clean fatJar
