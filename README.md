@@ -20,18 +20,18 @@ TODO
 
 ## Testing Server Environment
 Google cloud platform
-Machine type: n1-highcpu-4 (4 vCPUs, 3.6 GB memory)
-CPU platform: Intel Broadwell
-Zone: asia-southeast1-a
-OS: Ubuntu 16.04
+* Machine type: n1-highcpu-4 (4 vCPUs, 3.6 GB memory)
+* CPU platform: Intel Broadwell
+* Zone: asia-southeast1-a
+* OS: Ubuntu 16.04
 
 
 ## Testing Client Environment(different machine)
 Google cloud platform
-Machine type: n1-highcpu-4 (4 vCPUs, 3.6 GB memory)
-CPU platform: Intel Broadwell
-Zone: asia-southeast1-a
-OS: Ubuntu 16.04
+* Machine type: n1-highcpu-4 (4 vCPUs, 3.6 GB memory)
+* CPU platform: Intel Broadwell
+* Zone: asia-southeast1-a
+* OS: Ubuntu 16.04
 
 Using HTTP benchmarking tool written in Go
 https://github.com/codesenberg/bombardier
