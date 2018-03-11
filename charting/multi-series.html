@@ -3,10 +3,6 @@
 <meta charset="utf-8">
 <style>
 
-    .axis--x path {
-        display: none;
-    }
-
     .line {
         fill: none;
         stroke: steelblue;
@@ -24,6 +20,14 @@
         height = svg.attr("height") - margin.top - margin.bottom,
         g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+    svg.append("text")
+        .attr("x", (width / 2) + margin.left * 2)
+        .attr("y", margin.top)
+        .attr("text-anchor", "middle")
+        .style("font-size", "16px")
+        .style("text-decoration", "underline")
+        .text("Web framework performance on GCP n1-standard-1(1vCPU, 3.75GB RAM)");
+
     var x = d3.scaleLinear().range([0, width]),
         y = d3.scaleLinear().range([height, 0]),
         z = d3.scaleOrdinal(d3.schemeCategory10);
@@ -40,7 +44,7 @@
             return {
                 id: id,
                 values: data.map(function(d) {
-                    return {concurrency: d.concurrency, temperature: d[id]};
+                    return {concurrency: d.concurrency, temperature: parseInt(d[id])};
                 })
             };
         });
@@ -53,14 +57,19 @@
         y.domain([
             d3.min(cities, function(c) { return d3.min(c.values, function(d) { return d.temperature; }); }),
             d3.max(cities, function(c) { return d3.max(c.values, function(d) { return d.temperature; }); })
-        ]);
+        ]).nice();
 
         z.domain(cities.map(function(c) { return c.id; }));
 
         g.append("g")
-            .attr("class", "axis axis--x")
             .attr("transform", "translate(0," + height + ")")
-            .call(d3.axisBottom(x));
+            .call(d3.axisBottom(x))
+            .append("text")
+            .attr("x", width)
+            .attr("dx", "-2.0em")
+            .attr("dy", "2.5em")
+            .attr("fill", "#000")
+            .text("Concurrency")
 
         g.append("g")
             .attr("class", "axis axis--y")
@@ -68,9 +77,9 @@
             .append("text")
             .attr("transform", "rotate(-90)")
             .attr("y", 6)
-            .attr("dy", "0.41em")
+            .attr("dy", "0.7em")
             .attr("fill", "#000")
-            .text("Request/s");
+            .text("Performance(request/s)");
 
         var city = g.selectAll(".city")
             .data(cities)
