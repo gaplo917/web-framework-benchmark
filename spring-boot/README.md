@@ -12,12 +12,13 @@
 
 ## Build executable
 ```
+    cd app
     ./gradlew build
 ```
 
 ## Run
 ```
-    java -jar -server -Xms2G -Xmx3G -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:+AggressiveOpts build/libs/gs-spring-boot-0.1.0.jar
+    java -jar -Xmx3G build/libs/gs-spring-boot-0.1.0.jar
 ```
 
 # n1-highcpu-4 CPU Utlization under test

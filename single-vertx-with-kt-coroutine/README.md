@@ -21,7 +21,7 @@
 
 ## Run
 ```
-java -jar -server -Xms2G -Xmx3G -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:+AggressiveOpts build/libs/single-vertx-kotlin-all-1.0-SNAPSHOT.jar
+java -jar -Xmx3G build/libs/single-vertx-kotlin-all-1.0-SNAPSHOT.jar
 ```
 
 # n1-highcpu-4 CPU Utlization under test

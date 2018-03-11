@@ -11,30 +11,29 @@ it can scale horizontal easily and automatically scale by kubernetes.
 ## Single verticle + Coroutine handling all request
 TODO
 
+## Testing Server Environment
+Google cloud platform
+Machine type: n1-highcpu-4 (1 vCPUs, 3.75 GB memory), n1-highcpu-4 (4 vCPUs, 3.6 GB memory)
+CPU platform: Intel Broadwell
+Zone: asia-southeast1-a
+OS: Ubuntu 16.04
+
+
+## Testing Client Environment
+Google cloud platform
+Machine type: n1-highcpu-8 (8 vCPUs, 7.2 GB memory)
+CPU platform: Intel Broadwell
+Zone: asia-southeast1-a
+OS: Ubuntu 16.04
+
+Using HTTP benchmarking tool written in Go
+https://github.com/codesenberg/bombardier
+
 ## Benchmark result
 TODO
 
 ## Conclusion
 TODO
-
-
-## Testing Server Environment
-Google cloud platform
-* Machine type: n1-highcpu-4 (4 vCPUs, 3.6 GB memory)
-* CPU platform: Intel Broadwell
-* Zone: asia-southeast1-a
-* OS: Ubuntu 16.04
-
-
-## Testing Client Environment(different machine)
-Google cloud platform
-* Machine type: n1-highcpu-4 (4 vCPUs, 3.6 GB memory)
-* CPU platform: Intel Broadwell
-* Zone: asia-southeast1-a
-* OS: Ubuntu 16.04
-
-Using HTTP benchmarking tool written in Go
-https://github.com/codesenberg/bombardier
 
 
 ## Running Benchmark example
@@ -43,6 +42,6 @@ https://github.com/codesenberg/bombardier
 sh run.sh {bench_to_run} {endpoint} {save_path} {machine_name}
 
 # Example
-sh run.sh bombardier_5x_less.sh http://10.148.0.2:8080/ ./single-vertx-with-kt-
-coroutine/ n1-standard-1
+sh run.sh bombardier_5x_less.sh http://10.148.0.2:8080/ ./single-vertx-with-kt-coroutine/ n1-standard-1
+sh run.sh bombardier.sh http://10.148.0.2:8080/ ./expressjs/ n1-highcpu-4
 ```

@@ -11,14 +11,15 @@ v10.3.0 https://github.com/kataras/iris
 
 ## Run
 ```
+    ulimit -n 10000
     go get -u github.com/kataras/iris
-    go run main.go
+
+    # Single Core
+    GOMAXPROCS=1 go run main.go
+
+    # 4 Core
+    GOMAXPROCS=4 go run main.go
 ```
 
 ## CPU Utlization under test
 4 thread 100%
-
-
-## Problem
-When running `-c 2000`, some connection maybe dropped and client encounter
-long waiting. It affected the benchmark result(c2000.txt)
