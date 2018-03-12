@@ -1,0 +1,60 @@
+{
+  "spec": {
+    "numberOfConnections": 2000,
+    "testType": "timed",
+    "testDurationSeconds": 30,
+    "method": "GET",
+    "url": "http://10.148.0.5/blog/public/index.php",
+    "body": "",
+    "stream": false,
+    "timeoutSeconds": 2,
+    "client": "net/http.v2"
+  },
+  "result": {
+    "bytesRead": 6200188,
+    "bytesWritten": 4587296,
+    "timeTakenSeconds": 32.042916736,
+    "req1xx": 0,
+    "req2xx": 30585,
+    "req3xx": 0,
+    "req4xx": 0,
+    "req5xx": 0,
+    "others": 1197837,
+    "errors": [
+      {
+        "description": "Get http://10.148.0.5/blog/public/index.php: dial tcp 10.148.0.5:80: socket: too many open files",
+        "count": 1178540
+      },
+      {
+        "description": "Get http://10.148.0.5/blog/public/index.php: net/http: request canceled (Client.Timeout exceeded while awaiting headers)",
+        "count": 10479
+      },
+      {
+        "description": "Get http://10.148.0.5/blog/public/index.php: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)",
+        "count": 8818
+      }
+    ],
+    "latency": {
+      "mean": 49554.69341887397,
+      "stddev": 214517.6436339964,
+      "max": 3346995,
+      "percentiles": {
+        "50": 31,
+        "75": 35,
+        "90": 2442,
+        "99": 2000413
+      }
+    },
+    "rps": {
+      "mean": 45504.04390473165,
+      "stddev": 64649.92153384446,
+      "max": 197745.69903104607,
+      "percentiles": {
+        "50": 1451.121209,
+        "75": 98319.447684,
+        "90": 158838.418979,
+        "99": 190826.895254
+      }
+    }
+  }
+}

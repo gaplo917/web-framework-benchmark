@@ -1,0 +1,46 @@
+{
+  "spec": {
+    "numberOfConnections": 50,
+    "testType": "timed",
+    "testDurationSeconds": 30,
+    "method": "GET",
+    "url": "http://10.148.0.5/blog/public/index.php",
+    "body": "",
+    "stream": false,
+    "timeoutSeconds": 2,
+    "client": "net/http.v2"
+  },
+  "result": {
+    "bytesRead": 6398148,
+    "bytesWritten": 3547488,
+    "timeTakenSeconds": 30.03732686,
+    "req1xx": 0,
+    "req2xx": 31674,
+    "req3xx": 0,
+    "req4xx": 0,
+    "req5xx": 0,
+    "others": 0,
+    "latency": {
+      "mean": 47380.48718191576,
+      "stddev": 35140.451552948325,
+      "max": 862903,
+      "percentiles": {
+        "50": 32675,
+        "75": 36908,
+        "90": 105377,
+        "99": 175416
+      }
+    },
+    "rps": {
+      "mean": 1054.3124490976963,
+      "stddev": 93.85718098568783,
+      "max": 1605.5118022928616,
+      "percentiles": {
+        "50": 1050.601574,
+        "75": 1101.43721,
+        "90": 1151.81751,
+        "99": 1254.867569
+      }
+    }
+  }
+}

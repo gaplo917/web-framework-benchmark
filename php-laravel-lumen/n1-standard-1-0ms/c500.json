@@ -1,0 +1,56 @@
+{
+  "spec": {
+    "numberOfConnections": 500,
+    "testType": "timed",
+    "testDurationSeconds": 30,
+    "method": "GET",
+    "url": "http://10.148.0.5/blog/public/index.php",
+    "body": "",
+    "stream": false,
+    "timeoutSeconds": 2,
+    "client": "net/http.v2"
+  },
+  "result": {
+    "bytesRead": 6367444,
+    "bytesWritten": 3842832,
+    "timeTakenSeconds": 30.846723205,
+    "req1xx": 0,
+    "req2xx": 31522,
+    "req3xx": 0,
+    "req4xx": 0,
+    "req5xx": 0,
+    "others": 3692,
+    "errors": [
+      {
+        "description": "Get http://10.148.0.5/blog/public/index.php: net/http: request canceled (Client.Timeout exceeded while awaiting headers)",
+        "count": 2792
+      },
+      {
+        "description": "Get http://10.148.0.5/blog/public/index.php: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)",
+        "count": 900
+      }
+    ],
+    "latency": {
+      "mean": 430005.9718861816,
+      "stddev": 400157.52375516767,
+      "max": 2020272,
+      "percentiles": {
+        "50": 126876,
+        "75": 219341,
+        "90": 2000091,
+        "99": 2000342
+      }
+    },
+    "rps": {
+      "mean": 1169.378270742222,
+      "stddev": 574.9541950040748,
+      "max": 16514.17425420456,
+      "percentiles": {
+        "50": 1100.743497,
+        "75": 1201.017742,
+        "90": 1301.902666,
+        "99": 3539.494603
+      }
+    }
+  }
+}
