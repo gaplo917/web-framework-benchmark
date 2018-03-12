@@ -1,0 +1,46 @@
+{
+  "spec": {
+    "numberOfConnections": 50,
+    "testType": "timed",
+    "testDurationSeconds": 30,
+    "method": "GET",
+    "url": "http://10.148.0.2:8080/10ms",
+    "body": "",
+    "stream": false,
+    "timeoutSeconds": 2,
+    "client": "net/http.v2"
+  },
+  "result": {
+    "bytesRead": 18088954,
+    "bytesWritten": 12738700,
+    "timeTakenSeconds": 30.006910728,
+    "req1xx": 0,
+    "req2xx": 127387,
+    "req3xx": 0,
+    "req4xx": 0,
+    "req5xx": 0,
+    "others": 0,
+    "latency": {
+      "mean": 11772.628462872977,
+      "stddev": 696.2357453774291,
+      "max": 23991,
+      "percentiles": {
+        "50": 11755,
+        "75": 12166,
+        "90": 12695,
+        "99": 16662
+      }
+    },
+    "rps": {
+      "mean": 4245.803898289432,
+      "stddev": 942.577248649121,
+      "max": 5951.349149030471,
+      "percentiles": {
+        "50": 4842.417017,
+        "75": 5002.577328,
+        "90": 5008.776378,
+        "99": 5035.865687
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "spec": {
+    "numberOfConnections": 2000,
+    "testType": "timed",
+    "testDurationSeconds": 30,
+    "method": "GET",
+    "url": "http://10.148.0.2:8080",
+    "body": "",
+    "stream": false,
+    "timeoutSeconds": 2,
+    "client": "net/http.v2"
+  },
+  "result": {
+    "bytesRead": 57224154,
+    "bytesWritten": 38816448,
+    "timeTakenSeconds": 30.172433773,
+    "req1xx": 0,
+    "req2xx": 402987,
+    "req3xx": 0,
+    "req4xx": 0,
+    "req5xx": 0,
+    "others": 1351,
+    "errors": [
+      {
+        "description": "Get http://10.148.0.2:8080: net/http: request canceled (Client.Timeout exceeded while awaiting headers)",
+        "count": 1351
+      }
+    ],
+    "latency": {
+      "mean": 148573.14244023565,
+      "stddev": 71062.20766235831,
+      "max": 2097555,
+      "percentiles": {
+        "50": 132399,
+        "75": 151378,
+        "90": 179022,
+        "99": 276050
+      }
+    },
+    "rps": {
+      "mean": 13562.324178832529,
+      "stddev": 4893.860727619823,
+      "max": 57809.26497962224,
+      "percentiles": {
+        "50": 14278.663393,
+        "75": 17215.705888,
+        "90": 18200.996505,
+        "99": 23569.134163
+      }
+    }
+  }
+}
