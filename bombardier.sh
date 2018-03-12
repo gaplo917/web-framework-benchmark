@@ -2,8 +2,7 @@
 mkdir -p $2;
 
 echo "running warmup...";
-~/go/bin/bombardier --http2 -c 125 -n 20000 -l $1 > "$2/warmup1.txt";
-~/go/bin/bombardier --http2 -c 250 -n 20000 -l $1 > "$2/warmup2.txt";
+~/go/bin/bombardier --http2 -o json -p result -c 50 -d 30s -l $1 | jq '.' | tee "$2/warmup.json" > /dev/null;
 
 sleep 5;
 
