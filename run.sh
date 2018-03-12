@@ -8,7 +8,8 @@ rm -rf "$result_path$4-2ms";
 rm -rf "$result_path$4-5ms";
 rm -rf "$result_path$4-10ms";
 
+echo "Start running 0ms benchmark...";
 sh $1 $url "$result_path$4-0ms";
-#sh $1 "$url/2ms" "$result_path$4-2ms";
-#sh $1 "$url/5ms" "$result_path$4-5ms";
+
+echo "Start running 10ms benchmark...";
 sh $1 "$url/10ms" "$result_path$4-10ms";
