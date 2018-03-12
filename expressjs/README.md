@@ -18,6 +18,3 @@
 ```
     node server.js
 ```
-
-## n1-highcpu-4 CPU Utlization under test
-4 thread 100%

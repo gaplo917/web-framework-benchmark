@@ -20,6 +20,3 @@
 ```
     java -jar -Xmx3G build/libs/gs-spring-boot-0.1.0.jar
 ```
-
-# n1-highcpu-4 CPU Utlization under test
-4 threads being utilized equally, mostly 100%
