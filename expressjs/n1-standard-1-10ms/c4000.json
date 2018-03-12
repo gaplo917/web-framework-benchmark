@@ -1,0 +1,56 @@
+{
+  "spec": {
+    "numberOfConnections": 4000,
+    "testType": "timed",
+    "testDurationSeconds": 30,
+    "method": "GET",
+    "url": "http://10.148.0.5:8080/10ms",
+    "body": "",
+    "stream": false,
+    "timeoutSeconds": 2,
+    "client": "net/http.v2"
+  },
+  "result": {
+    "bytesRead": 51432040,
+    "bytesWritten": 25116200,
+    "timeTakenSeconds": 30.3811808,
+    "req1xx": 0,
+    "req2xx": 250888,
+    "req3xx": 0,
+    "req4xx": 0,
+    "req5xx": 0,
+    "others": 1933,
+    "errors": [
+      {
+        "description": "Get http://10.148.0.5:8080/10ms: dial tcp 10.148.0.5:8080: socket: too many open files",
+        "count": 1659
+      },
+      {
+        "description": "Get http://10.148.0.5:8080/10ms: net/http: request canceled (Client.Timeout exceeded while awaiting headers)",
+        "count": 274
+      }
+    ],
+    "latency": {
+      "mean": 478171.59384307475,
+      "stddev": 129019.22594720946,
+      "max": 2001144,
+      "percentiles": {
+        "50": 482675,
+        "75": 554039,
+        "90": 584735,
+        "99": 1007592
+      }
+    },
+    "rps": {
+      "mean": 8522.582642861595,
+      "stddev": 8275.915585333549,
+      "max": 59321.09915923538,
+      "percentiles": {
+        "50": 2457.001595,
+        "75": 19351.203645,
+        "90": 23412.59709,
+        "99": 26907.161109
+      }
+    }
+  }
+}
