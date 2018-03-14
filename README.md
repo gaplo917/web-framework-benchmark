@@ -8,10 +8,10 @@ But with the power of kubernetes, the "Multiple Verticle" may not be suitable fo
 Vert.x in microservice architecture because any stateless service can be scaled horizontally on demand.
 
 ## Benchmark TODO
-[x] Using a Go HTTP benchmark client to make N concurrent request in 30s
-[x] Use d3 script to render the benchmark result
-[ ] Automatically generate benchmark data for d3
-[ ] Automatically run benchmark when adding a new web framework  
+* [x] Using a Go HTTP benchmark client to make N concurrent request in 30s
+* [x] Use d3 script to render the benchmark result
+* [ ] Automatically generate benchmark data for d3
+* [ ] Automatically run benchmark when adding a new web framework  
 
 
 ## Benchmark Performed
