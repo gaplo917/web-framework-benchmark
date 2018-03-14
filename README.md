@@ -14,6 +14,21 @@ Vert.x in microservice architecture because any stateless service can be scaled 
 [ ] Automatically run benchmark when adding a new web framework  
 
 
+## Benchmark Performed
+Make N concurrent request in 30s, where N in [50,125,250,500,1000,2000,4000]
+
+Testing framework
+* Express 
+* Koa
+* Go Iris
+* Vert.x Kotlin with Custom coroutine implementation
+* Spring boot
+* PHP lumen (fpm + apache2)
+
+Testing implemenation
+* Directly reply "OK" (0ms I/O)
+* 10ms I/O simulation
+
 ## Benchmark Server Environment
 Google cloud platform
 * Machine type: n1-standard-1 (1 vCPUs, 3.75 GB memory)
@@ -33,7 +48,8 @@ Using HTTP benchmarking tool written in Go
 https://github.com/codesenberg/bombardier
 
 ## Benchmark result
-TODO(checkout charting branch at this moment)
+* [Average Latency](https://rawgit.com/gaplo917/web-framework-benchmark/master/charting/latency/index.html)
+* [Average Request/s](https://rawgit.com/gaplo917/web-framework-benchmark/master/charting/rps/index.html)
 
 ## Conclusion
 TODO
