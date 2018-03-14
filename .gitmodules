@@ -1,0 +1,6 @@
+[submodule "single-vertx-with-kt-coroutine/single-vertx-kotlin"]
+	path = single-vertx-with-kt-coroutine/single-vertx-kotlin
+	url = https://github.com/gaplo917/single-vertx-kotlin
+[submodule "spring-boot/app"]
+	path = spring-boot/app
+	url = https://github.com/gaplo917/gs-spring-boot.git

@@ -10,13 +10,13 @@
 ## Spring Boot Version
 2.0
 
-## Build executable
+## Build executable & Run
 ```
-    cd app
-    ./gradlew build
-```
+    cd app/initial
 
-## Run
-```
+    # build
+    ./gradlew build
+
+    # Run
     java -jar -Xmx3G build/libs/gs-spring-boot-0.1.0.jar
 ```
