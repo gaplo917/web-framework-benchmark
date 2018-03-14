@@ -4,3 +4,6 @@
 [submodule "spring-boot/app"]
 	path = spring-boot/app
 	url = https://github.com/gaplo917/gs-spring-boot.git
+[submodule "php-laravel-lumen/app"]
+	path = php-laravel-lumen/app
+	url = https://github.com/gaplo917/lumen.git
