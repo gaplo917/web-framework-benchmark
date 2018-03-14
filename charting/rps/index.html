@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--https://bl.ocks.org/mbostock/3884955-->
+<head>
+    <meta charset="utf-8"/>
+    <link rel="dns-prefetch" href="https://assets-cdn.github.com">
+    <link rel="stylesheet" href="../multi-series.css"/>
+</head>
+<body>
+    <svg id="ms" width="1400" height="1000"></svg>
+</body>
+
+<script src="//d3js.org/d3.v4.min.js"></script>
+<script src="../multi-series.js"></script>
+<script>
+    createMultiSeries({
+        id: "#ms",
+        dataUrl: "0ms.json",
+        title: "Average Request/s on Different Concurrency on GCP n1-standard-1(1vCPU, 3.75GB RAM)",
+        xAxisTitle: "Concurrency",
+        yAxisTitle: "Average Request/s",
+        pathOnly: false,
+    })
+
+    createMultiSeries({
+        id: "#ms",
+        dataUrl: "10ms.json",
+        pathOnly: true,
+        dotted: true
+    })
+</script>
