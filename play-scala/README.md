@@ -20,5 +20,5 @@
 sbt stage
 
 # Run
-sh ./target/universal/play-scala-starter-example -Dplay.http.secret.key='QCY?tAnfk?aZ?iwrNwnxIlR6CTf:G3gf:90Latabg@5241AB`R5W:1uDFN];Ik@n' -Dhttp.port=8080
+sh ./target/universal/play-scala-starter-example-1.0-SNAPSHOT/bin/play-scala-starter-example  -Dplay.http.secret.key='QCY?tAnfk?aZ?iwrNwnxIlR6CTf:G3gf:90Latabg@5241AB`R5W:1uDFN];Ik@n' -Dhttp.port=8080
 ```
