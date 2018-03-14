@@ -7,3 +7,6 @@
 [submodule "php-laravel-lumen/app"]
 	path = php-laravel-lumen/app
 	url = https://github.com/gaplo917/lumen.git
+[submodule "play-scala/app"]
+	path = play-scala/app
+	url = https://github.com/gaplo917/play-scala-starter-example.git
