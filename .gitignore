@@ -6,3 +6,5 @@ php-laravel-lumen/blog/vendor/
 !gradle-wrapper.jar
 
 **/.idea
+
+.DS_Store
