@@ -1,4 +1,4 @@
-## Introduction
+## Benchmark Objective
 The main purpose of this performance-test is to verify my implementation of https://github.com/gaplo917/single-vertx-kotlin.
 
 [Vert.x](http://vertx.io/) is incredibly flexible and performant. I started to use
@@ -7,10 +7,14 @@ Vert.x Koltin to build stateless API Server and targeted to build a express-like
 But with the power of kubernetes, the "Multiple Verticle" may not be suitable for running stateless
 Vert.x in microservice architecture because any stateless service can be scaled horizontally on demand.
 
-## Single verticle + Coroutine handling all request
-TODO
+## Benchmark TODO
+[x] Using a Go HTTP benchmark client to make N concurrent request in 30s
+[x] Use d3 script to render the benchmark result
+[ ] Automatically generate benchmark data for d3
+[ ] Automatically run benchmark when adding a new web framework  
 
-## Testing Server Environment
+
+## Benchmark Server Environment
 Google cloud platform
 * Machine type: n1-standard-1 (1 vCPUs, 3.75 GB memory)
 * CPU platform: Intel Broadwell
@@ -18,7 +22,7 @@ Google cloud platform
 * OS: Ubuntu 16.04
 
 
-## Testing Client Environment
+## Benchmark Client Environment
 Google cloud platform
 * Machine type: n1-highcpu-8 (8 vCPUs, 7.2 GB memory)
 * CPU platform: Intel Broadwell
@@ -43,6 +47,5 @@ sh run.sh {bench_to_run} {endpoint} {save_path} {machine_name}
 # Example
 sh run.sh bombardier.sh http://10.148.0.2:8080 ./single-vertx-with-kt-coroutine/ n1-standard-1
 sh run.sh bombardier.sh http://10.148.0.2:8080 ./expressjs/ n1-highcpu-4
-sh run.sh bombardier.sh http://10.148.0.5/blog/public/index.php ./php-laravel-
-lumen/ n1-standard-1
+sh run.sh bombardier.sh http://10.148.0.5/blog/public/index.php ./php-laravel-lumen/ n1-standard-1
 ```
