@@ -7,6 +7,10 @@ Vert.x Koltin to build stateless API Server and targeted to build a express-like
 But with the power of kubernetes, the "Multiple Verticle" may not be suitable for running stateless
 Vert.x in microservice architecture because any stateless service can be scaled horizontally on demand.
 
+## Benchmark result
+* [Average Request/s](https://rawgit.com/gaplo917/web-framework-benchmark/master/charting/rps/index.html)
+* [Average Latency](https://rawgit.com/gaplo917/web-framework-benchmark/master/charting/latency/index.html)
+
 ## Benchmark TODO
 * [x] Using a Go HTTP benchmark client to make N concurrent request in 30s
 * [x] Use d3 script to render the benchmark result
@@ -46,10 +50,6 @@ Google cloud platform
 
 Using HTTP benchmarking tool written in Go
 https://github.com/codesenberg/bombardier
-
-## Benchmark result
-* [Average Latency](https://rawgit.com/gaplo917/web-framework-benchmark/master/charting/latency/index.html)
-* [Average Request/s](https://rawgit.com/gaplo917/web-framework-benchmark/master/charting/rps/index.html)
 
 ## Conclusion
 TODO
